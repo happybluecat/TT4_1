@@ -42,28 +42,29 @@ class TransferForm extends React.Component {
 
     render() {
         return (
+
             <form onSubmit={this.handleSubmit}>
                 <div>
                 <label>
-                    Recipient ID:
-            <input type="number" name="payeeID" value={this.state.payeeID} onChange={this.handleChange} />
+                    Recipient ID: &nbsp;&nbsp;
+            <input type="text" name="payeeID" value={this.state.payeeID} onChange={this.handleChange} placeholder="Recipient ID" />
                 </label>
                 </div>
                 <div>
                 <label>
-                    Amount:
+                    Amount: &nbsp;&nbsp;
             <input type="number" name="amount" value={this.state.amount} onChange={this.handleChange} />
                 </label>
                 </div>
                 <div>
                 <label>
-                    Message:
-            <input type="text" name="message" value={this.state.message} onChange={this.handleChange} />
+                    Message: &nbsp;&nbsp;
+            <input type="text" name="message" value={this.state.message} onChange={this.handleChange} placeholder="Message" />
                 </label>
                 </div>
                 <div>
                 <label>
-                    eGift:
+                    eGift: &nbsp;&nbsp;
             <input type="checkbox" name="eGift" value={this.state.eGift} checked={this.state.eGift} onChange={e => this.setState({
             ...this.state, eGift: !this.state.eGift})} />
                 </label>
