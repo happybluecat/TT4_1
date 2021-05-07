@@ -1,18 +1,21 @@
-import './components/style.css';
-import LoginPage from './components/LoginPage'
-import TransferPage from './components/TransferPage/TransferPage'
-// import NavBar from "./component/NavBar/NavBar";
+import "./components/style.css";
+import LoginPage from "./components/LoginPage";
+import TransferPage from "./components/TransferPage/TransferPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+
 // import Transaction from "./components/TransactionView/Transaction"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <TransferPage />
-      </header>
-      {/* <NavBar /> */}
-      {/* <Transaction /> */}
-    </div>
+    <>
+      <Router>
+        <NavBar />
+        <Switch>
+          <TransferPage />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
