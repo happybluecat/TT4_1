@@ -19,7 +19,7 @@ function NavBar() {
           </Link>
         </li>
         <li>
-          <Link to="/Transfer" className={classes["navbar-link"]}>
+          <Link to="/TransferPage" className={classes["navbar-link"]}>
             <i className="fa fa-exchange"></i>
             Transfer
           </Link>
