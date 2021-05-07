@@ -65,6 +65,13 @@ body {
 	margin: 7px 0;
 }
 
+.login-list{
+	padding: 12px 10px; 
+	color: #ffffff;
+	font-size: 14px;
+	margin: 7px;
+}
+
 .debit-amount {
 	color: red;
 	float: right;

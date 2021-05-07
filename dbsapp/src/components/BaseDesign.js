@@ -1,4 +1,4 @@
-const Ewallet = () => {
+const BaseDesign = () => {
 
     return (
         <div>
@@ -49,4 +49,4 @@ const Ewallet = () => {
     )
 }
 
-export default Ewallet;
+export default BaseDesign;
