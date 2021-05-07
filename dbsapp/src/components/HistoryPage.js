@@ -4,50 +4,35 @@ import Balance from './Balance'
 import Transaction from './Transaction'
 
 const HistoryPage = ({custID, accountKey}) => {
-  const [userAccounts, setUserAccounts] = useState([])
-
-  const [userTransactions, setUserTransactions] = useState([
+  const [userAccounts, setUserAccounts] = useState([
     {
-      "eGift": false,
-      "datetime": 1611445424,
-      "custID": 8,
-      "amount": 53.19,
-      "message": "Breakfast",
-      "payeeID": 1,
-      "expenseCat": "Transport"
+        "accountName": "Saving Account",
+        "bankInfoID": 45,
+        "availableBal": 88888.88,
+        "accountNumber": 56993360,
+        "linked": false
     },
     {
-      "eGift": true,
-      "datetime": 1618944414,
-      "custID": 1,
-      "amount": 810.29,
-      "message": "Thanks",
-      "payeeID": 6,
-      "expenseCat": "Shopping"
+        "accountName": "Current Account",
+        "bankInfoID": 1,
+        "availableBal": 88888.88,
+        "accountNumber": 30874906,
+        "linked": false
     },
     {
-      "eGift": true,
-      "datetime": 1618973639,
-      "custID": 1,
-      "amount": 414.62,
-      "message": "",
-      "payeeID": 14,
-      "expenseCat": "Others"
-    },
-    {
-      "eGift": false,
-      "datetime": 1615905638,
-      "custID": 12,
-      "amount": 289.72,
-      "message": "Dinner",
-      "payeeID": 1,
-      "expenseCat": "Others"
+        "accountName": "Multiplier Account",
+        "bankInfoID": 23,
+        "availableBal": 89964.89,
+        "accountNumber": 84067775,
+        "linked": true
     }
   ])
 
+  const [userTransactions, setUserTransactions] = useState([])
+
   useEffect(() => {
     axios
-      .post(`https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/accounts`,
+      .post(`https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/view`,
         {
           'accountKey': '1lujbdro-c7p2-asf6-bjyl-hveq2in12rb',
           'custID': 1
@@ -58,7 +43,7 @@ const HistoryPage = ({custID, accountKey}) => {
           }
         })
       .then(response => {
-        setUserAccounts(response.data)
+        setUserTransactions(response.data)
       })
   }, [custID, accountKey])
 
