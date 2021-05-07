@@ -26,36 +26,30 @@ class TransferForm extends React.Component {
         });
     }
 
-    setGift(event) {
-        const checked = this.state.eGift;
-        console.log(checked);
-        this.setState({
-            ...this.state,
-            eGift: !checked
-        });
-    }
+    handleSubmit(event) {   
+        let headers = {
+            'x-api-key': 'dgkCTGTaXm7HYZNgyizLY4ocEVSO7G3c54QcYSIu'
+        }
 
-    handleSubmit(event) {
-        setError(null);
-        setLoading(true);
-        axios
-        .post("http://localhost:4000/users/signin", {
+        var data = {
             custID: this.state.custID,
             accountKey: this.state.accountKey,
             payeeID: this.state.payeeID,
             amount: this.state.amount,
             eGift: this.state.eGift,
             message: this.state.message
-        })
+        }
+
+        axios
+        .post("https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/add", 
+        data, {headers: headers})
         .then((response) => {
-            setLoading(false);
             console.log("Sent transaction");
         })
         .catch((error) => {
-            setLoading(false);
-            if (error.response.status === 401)
-            setError(error.response.data.message);
-            else setError("Something went wrong. Please try again later.");
+            if (error.response.status === 401) {
+                console.log("Error 401");
+            }
         });   
     }
 
