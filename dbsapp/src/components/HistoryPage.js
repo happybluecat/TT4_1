@@ -64,6 +64,7 @@ const HistoryPage = ({custID, accountKey}) => {
       Transaction History
       <thead>
         <tr>
+          <th scope="col">Date</th>
           <th scope="col">Amount</th>
           <th scope="col">Message</th>
           <th scope="col">Category</th>
