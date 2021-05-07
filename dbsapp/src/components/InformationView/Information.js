@@ -5,6 +5,13 @@ function Information() {
   return (
     <div>
         {/* Account Information */}
+
+        <title>Transaction</title>
+        <link rel="stylesheet" href="style.css" />
+        <div className="wallet-container text-center">
+          <p className="page-title"><i className="fa fa-align-left" />Transaction<i className="fa fa-user" /></p>
+          <div className="amount-box text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Font_Awesome_5_solid_university.svg/768px-Font_Awesome_5_solid_university.svg.png" alt="transaction" />
         <div>
             <div>
                 <h1>My Account</h1>
@@ -29,7 +36,7 @@ function Information() {
         {/* Transaction History */}
         <div>
             <div>
-                <h1>Transaction History</h1>
+                <h2>Transaction History</h2>
             </div>
             <div>
                 <table>
@@ -63,10 +70,38 @@ function Information() {
                     </tbody>
                 </table>
             </div>
+            
 
         </div>
+        
+
+        
         {/* End of Transaction History */}
+      </div>
+      <div className="footer-menu">
+            <div className="row text-center">
+              <div className="col-md-3">
+                <i className="fa fa-home" />
+                <p>Home</p>
+              </div>
+              <div className="col-md-3">
+                <i className="fa fa-exchange" />
+                <p>Transfer</p>
+              </div>
+              <div className="col-md-3">
+                <i className="fa fa-university" />
+                <p>Account</p>
+              </div>
+              <div className="col-md-3">
+                <i className="fa fa-sign-out" />
+                <p>Logout</p>
+              </div>
+            </div>
+          </div>
       
+      
+    </div>
+    
     </div>
   );
 }
