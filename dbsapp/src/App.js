@@ -4,6 +4,9 @@ import TransferPage from "./components/TransferPage/TransferPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import useToken from './components/useToken';
+import Transaction from "./components/TransactionView/Transaction";
+import Information from "./components/InformationView/Information";
+import BaseDesign from "./components/BaseDesign";
 
 // import Transaction from "./components/TransactionView/Transaction"
 // import AuthContext from "./store/auth-context";
@@ -18,6 +21,7 @@ function App() {
     return <Login setToken={setToken} />
   }
   return (
+
     <>
       <Router>
         <NavBar />
