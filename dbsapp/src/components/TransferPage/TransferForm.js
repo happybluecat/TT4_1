@@ -35,11 +35,32 @@ class TransferForm extends React.Component {
     });
   }
 
-  handleSubmit(event) {
-    alert("Form PayeeID: " + this.state.payeeID);
-    console.log(this.state);
-    event.preventDefault();
-  }
+  handleSubmit(event) {   
+    let headers = {
+        'x-api-key': 'dgkCTGTaXm7HYZNgyizLY4ocEVSO7G3c54QcYSIu'
+    }
+
+    var data = {
+        custID: this.state.custID,
+        accountKey: this.state.accountKey,
+        payeeID: this.state.payeeID,
+        amount: this.state.amount,
+        eGift: this.state.eGift,
+        message: this.state.message
+    }
+
+    axios
+    .post("https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/transactions/add", 
+    data, {headers: headers})
+    .then((response) => {
+        console.log("Sent transaction");
+    })
+    .catch((error) => {
+        if (error.response.status === 401) {
+            console.log("Error 401");
+        }
+    });   
+}
 
   render() {
     return (
