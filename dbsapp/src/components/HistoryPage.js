@@ -1,10 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
-const HistoryPage = () => {
+const HistoryPage = ({custID, accountKey}) => {
   useEffect(() => {
     axios
-      .get(`https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/accounts?key=${process.env.REACT_APP_API_KEY}&x-api-key=`)
+      .post(`http://localhost:3000/accounts`,
+      {
+        accountKey: custID,
+        custID: accountKey
+      })
       .then(response => {
         console.log(response.data)
       })
