@@ -18,14 +18,15 @@ const LoginPage = () => {
           </div>
 
           <form className ='login-form' >
-                <div className = 'login-list'>
+                <div>
                     <label>Username: &nbsp;&nbsp;</label>
                     <input type ='text' placeholder='Username' ></input>
-                </div>
-                <div className = 'login-list'>
+
+
                     <label>Password: &nbsp;&nbsp;</label>
                     <input type ='text' placeholder='Password'></input>
                 </div>
+
             <input type ='submit' value = 'Login' ></input>
             </form>
 
@@ -36,16 +37,16 @@ const LoginPage = () => {
                 <p>Home</p>
               </div>
               <div className="col-md-3">
-                <i className="fa fa-inbox" />
-                <p>Inbox</p>
+                <i className="fa fa-exchange" />
+                <p>Transfer</p>
               </div>
               <div className="col-md-3">
                 <i className="fa fa-university" />
                 <p>Bank</p>
               </div>
               <div className="col-md-3">
-                <i className="fa fa-barcode" />
-                <p>Scan</p>
+                <i className="fa fa-sign-out" />
+                <p>Logout</p>
               </div>
             </div>
           </div>
