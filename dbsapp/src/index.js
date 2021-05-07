@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { AuthContextProvide } from "./store/auth-context";
+import { AuthContextProvider } from "./store/auth-context";
 
 ReactDOM.render(
-  <AuthContextProvide>
+  <AuthContextProvider>
     <App />
-  </AuthContextProvide>,
+  </AuthContextProvider>,
   document.getElementById("root")
 );
 

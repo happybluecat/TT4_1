@@ -44,6 +44,14 @@ const LoginPage = (props) => {
       });
   };
 
+  const setError = () => {
+    console.log("placeholder");
+  };
+
+  const setLoading = () => {
+    console.log("placeholder");
+  };
+
   return (
     <div>
       <h1>Login</h1>
