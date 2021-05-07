@@ -26,17 +26,22 @@ const HistoryPage = ({custID, accountKey}) => {
     }
   ])
 
-  // useEffect(() => {  // not too sure how to fix this so using fake data for view first
-  //   axios
-  //     .post(`http://localhost:3000/accounts`,
-  //     {
-  //       accountKey: custID,
-  //       custID: accountKey
-  //     })
-  //     .then(response => {
-  //       console.log(response.data)
-  //     })
-  // }, [custID, accountKey])
+  useEffect(() => {  // not too sure how to fix this so using fake data for view first
+    axios
+      .post(`https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/accounts`,
+        {
+          'accountKey': custID,
+          'custID': accountKey
+        },
+        {
+          headers: {
+            'x-api-key': 'dgkCTGTaXm7HYZNgyizLY4ocEVSO7G3c54QcYSIu'
+          }
+        })
+      .then(response => {
+        console.log(response.data)
+      })
+  }, [custID, accountKey])
 
   return (
     <tbody>
