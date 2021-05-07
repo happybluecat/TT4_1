@@ -1,6 +1,7 @@
-import './components/style.css';
-
-import Login from './components/Login'
+import './App.css';
+import LoginPage from './components/LoginPage'
+// import NavBar from "./component/NavBar/NavBar";
+// import Transaction from "./components/TransactionView/Transaction"
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <header className="App-header">
       <Login />
       </header>
+      {/* <NavBar /> */}
+      {/* <Transaction /> */}
     </div>
   );
 }
