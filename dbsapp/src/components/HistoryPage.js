@@ -4,29 +4,7 @@ import Balance from './Balance'
 import Transaction from './Transaction'
 
 const HistoryPage = ({custID, accountKey}) => {
-  const [userAccounts, setUserAccounts] = useState([
-    {
-        "accountName": "Saving Account",
-        "bankInfoID": 45,
-        "availableBal": 88888.88,
-        "accountNumber": 56993360,
-        "linked": false
-    },
-    {
-        "accountName": "Current Account",
-        "bankInfoID": 1,
-        "availableBal": 88888.88,
-        "accountNumber": 30874906,
-        "linked": false
-    },
-    {
-        "accountName": "Multiplier Account",
-        "bankInfoID": 23,
-        "availableBal": 88954.88,
-        "accountNumber": 84067775,
-        "linked": true
-    }
-  ])
+  const [userAccounts, setUserAccounts] = useState([])
 
   const [userTransactions, setUserTransactions] = useState([
     {
@@ -67,12 +45,12 @@ const HistoryPage = ({custID, accountKey}) => {
     }
   ])
 
-  useEffect(() => {  // not too sure how to fix this so using fake data for view first
+  useEffect(() => {
     axios
       .post(`https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/accounts`,
         {
-          'accountKey': custID,
-          'custID': accountKey
+          'accountKey': '1lujbdro-c7p2-asf6-bjyl-hveq2in12rb',
+          'custID': 1
         },
         {
           headers: {
@@ -80,7 +58,7 @@ const HistoryPage = ({custID, accountKey}) => {
           }
         })
       .then(response => {
-        console.log(response.data)
+        setUserAccounts(response.data)
       })
   }, [custID, accountKey])
 
