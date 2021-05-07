@@ -24,6 +24,12 @@ function NavBar() {
             Account Details
           </Link>
         </li>
+        <li>
+          <Link to="/AccountDetails" className={classes["navbar-link"]}>
+            <i class="fa fa-sign-out"></i>
+            Logout
+          </Link>
+        </li>
       </div>
     </nav>
   );
