@@ -18,3 +18,10 @@
 .navbar-container li i {
   padding: 0.5rem;
 }
+
+.navbar-link,
+.navbar-link:hover,
+.navbar-link:active {
+  color: white;
+  text-decoration: none;
+}
