@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import Balance from './Balance'
 
 const HistoryPage = ({custID, accountKey}) => {
   const [userAccounts, setUserAccounts] = useState([
@@ -44,14 +45,12 @@ const HistoryPage = ({custID, accountKey}) => {
   }, [custID, accountKey])
 
   return (
-    <tbody>
-			{userAccounts.map(userAccount =>
-        <tr key={userAccount.bankInfoID}>
-          <td>{userAccount.accountName}</td>
-          <td>{userAccount.availableBal}</td>
-        </tr>
+    <div>
+      Account balances
+      {userAccounts.map(userAccount =>
+			  <Balance userAccount={userAccount} />
       )}
-    </tbody>
+    </div>
   )
 }
 
