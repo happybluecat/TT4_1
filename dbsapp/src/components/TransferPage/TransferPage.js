@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TransferForm from './TransferForm.js';
 
-export const TransferPage = () => {
+const TransferPage = () => {
 
     return (
         <header className='transfer'>
@@ -10,3 +10,5 @@ export const TransferPage = () => {
         </header>
     );
 }
+
+export default TransferPage

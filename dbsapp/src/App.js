@@ -1,7 +1,6 @@
 import './App.css';
 import LoginPage from './components/LoginPage'
-
-import { TransferPage } from './components/TransferPage/TransferPage.js';
+import TransferPage from './components/TransferPage/TransferPage'
 
 function App() {
   return (
