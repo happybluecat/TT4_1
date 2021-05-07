@@ -1,4 +1,4 @@
-import './App.css';
+import './components/style.css';
 import LoginPage from './components/LoginPage'
 // import NavBar from "./component/NavBar/NavBar";
 // import Transaction from "./components/TransactionView/Transaction"
