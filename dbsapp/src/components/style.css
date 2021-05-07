@@ -28,7 +28,7 @@ body {
 }
 
 .amount-box img {
-  width: 100px;
+	width: 100px;
 }
 
 .amount {
@@ -51,16 +51,14 @@ body {
 }
 
 .txn-history {
-  text-align: left;
+  	text-align: left;
+	background-color: #ffffff;
+	padding: 12px 10px; 
+	color: #777;
+	font-size: 14px;
+	margin: 7px 0;
 }
 
-.txn-list {
-  background-color: #fff;
-  padding: 12px 10px;
-  color: #777;
-  font-size: 14px;
-  margin: 7px 0;
-}
 
 .debit-amount {
   color: red;

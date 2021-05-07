@@ -26,6 +26,7 @@ const LoginPage = () => {
                     <label>Password: &nbsp;&nbsp;</label>
                     <input type ='text' placeholder='Password'></input>
                 </div>
+
             <input type ='submit' value = 'Login' ></input>
             </form>
 
