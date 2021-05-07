@@ -1,7 +1,7 @@
 import './App.css';
 import LoginPage from './components/LoginPage'
 // import NavBar from "./component/NavBar/NavBar";
-// import Transaction from "./component/Transaction/Transaction"
+// import Transaction from "./components/TransactionView/Transaction"
 
 function App() {
   return (
