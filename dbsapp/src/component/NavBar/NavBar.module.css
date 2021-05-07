@@ -1,0 +1,20 @@
+.navbar-container {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24px;
+  background-color: black;
+  color: white;
+}
+
+.navbar-container li {
+  text-align: center;
+  margin: 0 auto;
+  display: inline;
+  list-style-type: none;
+  padding: 2rem;
+}
+
+.navbar-container li i {
+  padding: 0.5rem;
+}
