@@ -4,8 +4,8 @@ class TransferForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            custID: '',
-            accountKey: '',
+            custID: '1',
+            accountKey: '1lujbdro-c7p2-asf6-bjyl-hveq2in12rbx',
             payeeID: '',
             amount: '',
             eGift: false,
