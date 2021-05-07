@@ -3,7 +3,6 @@ import TransferForm from './TransferForm.js';
 import logo from './transaction.png'
 
 const TransferPage = () => {
-
     return (
         <header className='transfer'>
         <title>Transaction</title>
@@ -25,16 +24,16 @@ const TransferPage = () => {
                 <p>Home</p>
               </div>
               <div className="col-md-3">
-                <i className="fa fa-inbox" />
-                <p>Inbox</p>
+                <i className="fa fa-exchange" />
+                <p>Transfer</p>
               </div>
               <div className="col-md-3">
                 <i className="fa fa-university" />
-                <p>Bank</p>
+                <p>Account</p>
               </div>
               <div className="col-md-3">
-                <i className="fa fa-barcode" />
-                <p>Scan</p>
+                <i className="fa fa-sign-out" />
+                <p>Logout</p>
               </div>
             </div>
           </div>
@@ -43,4 +42,4 @@ const TransferPage = () => {
     );
 }
 
-export default TransferPage
+export default TransferPage;

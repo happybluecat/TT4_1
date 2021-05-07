@@ -37,16 +37,16 @@ const LoginPage = () => {
                 <p>Home</p>
               </div>
               <div className="col-md-3">
-                <i className="fa fa-inbox" />
-                <p>Inbox</p>
+                <i className="fa fa-exchange" />
+                <p>Transfer</p>
               </div>
               <div className="col-md-3">
                 <i className="fa fa-university" />
                 <p>Bank</p>
               </div>
               <div className="col-md-3">
-                <i className="fa fa-barcode" />
-                <p>Scan</p>
+                <i className="fa fa-sign-out" />
+                <p>Logout</p>
               </div>
             </div>
           </div>
