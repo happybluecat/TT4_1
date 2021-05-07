@@ -7,8 +7,6 @@ function Transaction() {
     <div>
       <title>Transaction</title>
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <div className="wallet-container text-center">
           <p className="page-title"><i className="fa fa-align-left" />Transaction<i className="fa fa-user" /></p>
           <div className="amount-box text-center">
