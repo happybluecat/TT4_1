@@ -44,7 +44,7 @@ const LoginPage = (props) => {
       });
   };
 
-  const setError = () => {
+  const setError = (message) => {
     console.log("placeholder");
   };
 
