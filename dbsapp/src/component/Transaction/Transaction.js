@@ -6,12 +6,12 @@ function Transaction() {
     <div>
       <form method="POST">
         <div>
-          <label>Amount in:</label>
-          <input type="number" placeholder="SGD"/>
+          <label for="amount">Amount in:</label>
+          <input id="amount" placeholder="SGD" type="number"/>
         </div>
         <div>
-          <label>Recipient:</label>
-          <input type="text" placeholder="Recipient ID"/>
+          <label for="recipient-id">Recipient:</label>
+          <input id="recipient-id" placeholder="Recipient ID" type="text"/>
         </div>
         <div>
           <button type="submit">Cancel</button>
