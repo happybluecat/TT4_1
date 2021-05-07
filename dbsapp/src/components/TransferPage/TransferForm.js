@@ -1,4 +1,5 @@
 import * as React from 'react';
+import axios from "axios";
 
 class TransferForm extends React.Component {
     constructor(props) {
@@ -35,9 +36,27 @@ class TransferForm extends React.Component {
     }
 
     handleSubmit(event) {
-        alert('Form PayeeID: ' + this.state.payeeID);
-        console.log(this.state);
-        event.preventDefault();
+        setError(null);
+        setLoading(true);
+        axios
+        .post("http://localhost:4000/users/signin", {
+            custID: this.state.custID,
+            accountKey: this.state.accountKey,
+            payeeID: this.state.payeeID,
+            amount: this.state.amount,
+            eGift: this.state.eGift,
+            message: this.state.message
+        })
+        .then((response) => {
+            setLoading(false);
+            console.log("Sent transaction");
+        })
+        .catch((error) => {
+            setLoading(false);
+            if (error.response.status === 401)
+            setError(error.response.data.message);
+            else setError("Something went wrong. Please try again later.");
+        });   
     }
 
     render() {
