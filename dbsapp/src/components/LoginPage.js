@@ -18,14 +18,15 @@ const LoginPage = () => {
           </div>
 
           <form className ='login-form' >
-                <div className = 'login-list'>
+                <div>
                     <label>Username: &nbsp;&nbsp;</label>
                     <input type ='text' placeholder='Username' ></input>
-                </div>
-                <div className = 'login-list'>
+
+
                     <label>Password: &nbsp;&nbsp;</label>
                     <input type ='text' placeholder='Password'></input>
                 </div>
+
             <input type ='submit' value = 'Login' ></input>
             </form>
 

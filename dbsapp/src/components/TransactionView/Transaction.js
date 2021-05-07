@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import classes from "./components/style.css";
-//import translogo from "./components/TransactionView/transaction.png"
+import logo from './transaction.png';
 
 function Transaction() {
   return (
@@ -12,7 +12,7 @@ function Transaction() {
         <div className="wallet-container text-center">
           <p className="page-title"><i className="fa fa-align-left" />Transaction<i className="fa fa-user" /></p>
           <div className="amount-box text-center">
-            <img src="./components/TransactionView/transaction.png" alt="transaction" />
+            <img src={logo} alt="transaction" />
             
             
           </div>
