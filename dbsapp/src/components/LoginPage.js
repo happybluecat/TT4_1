@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import axios from "axios";
 import { setUserSession } from "../api/Common";
+import AuthContext from "../store/auth-context";
 
 const LoginPage = (props) => {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
+
+  const ctx = useContext(AuthContext);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -30,6 +33,8 @@ const LoginPage = (props) => {
         setLoading(false);
         setUserSession(response.data.token, response.data.user);
         props.history.push("/dashboard");
+        ctx.onLogin(username, password);
+        console.log("Logged In");
       })
       .catch((error) => {
         setLoading(false);
