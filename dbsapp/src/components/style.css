@@ -28,7 +28,7 @@ body {
 }
 
 .amount-box img {
-  width: 50px;
+  width: 100px;
 }
 
 .amount {
@@ -60,13 +60,6 @@ body {
   color: #777;
   font-size: 14px;
   margin: 7px 0;
-}
-
-.login-list {
-  padding: 12px 10px;
-  color: #ffffff;
-  font-size: 14px;
-  margin: 7px;
 }
 
 .debit-amount {
