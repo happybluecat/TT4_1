@@ -50,11 +50,26 @@ const HistoryPage = ({custID, accountKey}) => {
   return (
     <div>
       Account balances
+      <thead>
+        <tr>
+          <th scope="col">Account Name</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+
       {userAccounts.map(userAccount =>
 			  <Balance userAccount={userAccount} />
       )}
       <br/>
       Transaction History
+      <thead>
+        <tr>
+          <th scope="col">Amount</th>
+          <th scope="col">Message</th>
+          <th scope="col">Category</th>
+        </tr>
+      </thead>
+
       {userTransactions.map(userTransaction =>
         <Transaction userTransaction={userTransaction}/>
       )}
